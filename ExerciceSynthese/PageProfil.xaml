@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciceSynthese.PageProfil">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="5">
+                <Frame  Padding="3" BorderColor="White" CornerRadius="8"  BackgroundColor="Black"  HasShadow="True" Grid.ColumnSpan="2">
+                    <Label Text="Profil" FontSize="16" TextColor="White" FontAttributes="Bold" VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="2"/>
+                </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="Retour" BorderColor="DarkBlue" BackgroundColor="DodgerBlue" TextColor="White" FontAttributes="Bold" CornerRadius="2" Clicked="OnButtonRetourClicked" Grid.Column="1"/>
+                <Button Text="Valider" BorderColor="DarkBlue" BackgroundColor="DodgerBlue" TextColor="White" FontAttributes="Bold" CornerRadius="2" Clicked="OnButtonValiderClicked" Grid.Column="2"/>
+            </Grid>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Nom" FontSize="13" HorizontalOptions="End" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Prénom" FontSize="13" HorizontalOptions="End" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Âge" FontSize="13" HorizontalOptions="End" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+
+
+                <Entry x:Name="entNom"  MaxLength="40" Text="Nom" TextColor="White" BackgroundColor="#2c3e50" IsSpellCheckEnabled="false" ClearButtonVisibility="WhileEditing" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="entPrenom"  MaxLength="40" Text="Prénom" TextColor="White" BackgroundColor="#2c3e50" IsSpellCheckEnabled="false" ClearButtonVisibility="WhileEditing" Grid.Row="0" Grid.Column="2"/>
+                <Entry x:Name="entAge" MaxLength="3" Text="Âge" TextColor="White" BackgroundColor="#2c3e50" IsSpellCheckEnabled="false" ClearButtonVisibility="WhileEditing" Grid.Row="2" Grid.Column="1"/>
+
+
+            </Grid>
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
